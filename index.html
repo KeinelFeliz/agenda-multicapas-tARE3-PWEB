@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Agenda | Contactos</title>
+  <style>
+    :root{color-scheme:light;--ink:#182522;--muted:#6d7974;--line:#e1e8e2;--paper:#fff;--bg:#f4f6f1;--green:#176b50;--green-dark:#10533d;--mint:#e6f2eb;--orange:#bb5d31;--shadow:0 18px 50px #20382b12}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}.shell{max-width:1120px;margin:auto;padding:34px 28px 56px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}.brand{display:flex;gap:11px;align-items:center;font-weight:750;letter-spacing:-.03em}.brand-icon{width:38px;height:38px;border-radius:12px;background:var(--green);display:grid;place-items:center;color:#fff}.brand-icon svg{width:20px}.top-note{font-size:13px;color:var(--muted)}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:end;margin-bottom:32px}.eyebrow{color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:750;margin:0 0 12px}.hero h1{font-size:clamp(42px,6vw,64px);line-height:1.02;letter-spacing:-.065em;margin:0 0 16px;font-weight:720}.hero-copy{max-width:490px;margin:0;color:var(--muted);font-size:16px}.stats{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:#ffffffa6}.stats strong{font-size:27px;letter-spacing:-.04em}.stats span{display:block;color:var(--muted);font-size:12px}.toolbar{display:flex;gap:12px;align-items:center;margin:30px 0 16px}.search{position:relative;flex:1}.search svg{position:absolute;left:16px;top:15px;width:18px;color:#89968f}.search input{width:100%;height:48px;border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:0 16px 0 44px;outline:none}.search input:focus,.field input:focus{border-color:#70a88c;box-shadow:0 0 0 3px #176b5016}.button{border:0;border-radius:11px;min-height:46px;padding:0 19px;display:inline-flex;gap:9px;align-items:center;justify-content:center;font-weight:650;cursor:pointer;transition:.15s}.button:hover{transform:translateY(-1px)}.button-primary{background:var(--green);color:#fff}.button-primary:hover{background:var(--green-dark)}.button-secondary{background:var(--mint);color:var(--green-dark)}.button svg{width:17px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:4px 2px 12px}.section-head h2{font-size:14px;margin:0;font-weight:700}.section-head span{color:var(--muted);font-size:12px}.contact-list{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}.contact-row{display:grid;grid-template-columns:minmax(220px,1fr) minmax(180px,.72fr) 40px;align-items:center;gap:18px;padding:17px 22px;border-bottom:1px solid #edf0ec}.contact-row:last-child{border-bottom:0}.person{display:flex;align-items:center;gap:13px;min-width:0}.avatar{width:42px;height:42px;border-radius:13px;background:var(--mint);color:var(--green);font-weight:750;display:grid;place-items:center;font-size:13px;flex:none}.person-name{font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.phone{color:var(--muted);font-size:14px}.row-action{width:36px;height:36px;border:0;border-radius:9px;background:transparent;color:#78847d;display:grid;place-items:center}.row-action:hover{background:#f2f5f1;color:var(--ink)}.row-action svg{width:18px}.empty{padding:52px 24px;text-align:center;color:var(--muted)}.empty strong{display:block;color:var(--ink);margin-bottom:5px}.status{min-height:20px;margin:12px 2px;color:var(--muted);font-size:12px}.status.error{color:#a63d32}.status.success{color:var(--green)}.overlay{position:fixed;inset:0;background:#15251f66;display:none;place-items:center;padding:20px;z-index:5}.overlay.open{display:grid}.dialog{width:min(100%,480px);background:var(--paper);border-radius:20px;padding:27px;box-shadow:0 24px 80px #10291f40}.dialog-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:23px}.dialog h2{font-size:24px;letter-spacing:-.04em;margin:0 0 5px}.dialog p{margin:0;color:var(--muted);font-size:13px}.close{border:0;background:#f1f4f0;border-radius:9px;width:35px;height:35px;font-size:21px;cursor:pointer;color:var(--muted)}.field{display:block;margin-bottom:15px}.field span{display:block;font-weight:650;font-size:13px;margin-bottom:6px}.field input{height:45px;width:100%;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:none}.dialog-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:22px}.dialog-message{font-size:12px;min-height:18px;color:#a63d32;margin-top:8px}.loading{padding:34px;text-align:center;color:var(--muted)}.spinner{display:inline-block;width:16px;height:16px;border:2px solid #dbe6dc;border-top-color:var(--green);border-radius:50%;vertical-align:-3px;margin-right:8px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:700px){.shell{padding:22px 16px 40px}.topbar{margin-bottom:38px}.top-note{display:none}.hero{grid-template-columns:1fr;gap:22px;margin-bottom:25px}.hero h1{font-size:48px}.stats{max-width:210px}.toolbar{align-items:stretch;flex-direction:column}.toolbar .button{width:100%}.contact-row{grid-template-columns:minmax(0,1fr) 36px;gap:6px;padding:15px}.phone{grid-column:1;grid-row:2;margin-left:55px;margin-top:-11px}.row-action{grid-column:2;grid-row:1/3}.section-head{padding-top:3px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="brand"><span class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="3"/><circle cx="12" cy="9" r="2.5"/><path d="M8 17c.7-1.8 2-2.7 4-2.7s3.3.9 4 2.7"/></svg></span>mi agenda</div><div class="top-note">Tus contactos, siempre a mano</div></header>
+    <section class="hero"><div><p class="eyebrow">Agenda personal</p><h1>Las personas<br>que importan.</h1><p class="hero-copy">Guarda tus contactos en un solo lugar. Encuentra rápidamente su teléfono y mantén tu agenda al día.</p></div><div class="stats"><strong id="contact-count">—</strong><div><span>contactos</span><span>en tu agenda</span></div></div></section>
+    <div class="toolbar"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="search" type="search" placeholder="Buscar por nombre o teléfono…" aria-label="Buscar contactos"></label><button id="add-open" class="button button-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar contacto</button></div>
+    <div class="section-head"><h2>Todos los contactos</h2><span id="shown-count"></span></div>
+    <section id="contact-list" class="contact-list" aria-live="polite"><div class="loading"><span class="spinner"></span>Cargando contactos…</div></section><div id="status" class="status" role="status"></div>
+  </main>
+  <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><form id="contact-form" class="dialog"><div class="dialog-head"><div><h2 id="dialog-title">Nuevo contacto</h2><p>Agrega los datos de la persona a tu agenda.</p></div><button type="button" class="close" id="close-dialog" aria-label="Cerrar">×</button></div><label class="field"><span>Nombre</span><input name="nombre" autocomplete="given-name" required maxlength="80" placeholder="Ej. Ana"></label><label class="field"><span>Apellido</span><input name="apellido" autocomplete="family-name" required maxlength="80" placeholder="Ej. García"></label><label class="field"><span>Teléfono</span><input name="telefono" type="tel" autocomplete="tel" required maxlength="30" placeholder="Ej. 809-555-0123"></label><div id="form-message" class="dialog-message"></div><div class="dialog-actions"><button type="button" id="cancel-dialog" class="button button-secondary">Cancelar</button><button id="submit-button" class="button button-primary" type="submit">Guardar contacto</button></div></form></div>
+  <script>
+    const API_URL = 'http://www.raydelto.org/agenda.php';
+    const list = document.querySelector('#contact-list');
+    const statusBox = document.querySelector('#status');
+    const count = document.querySelector('#contact-count');
+    const shownCount = document.querySelector('#shown-count');
+    const searchInput = document.querySelector('#search');
+    const overlay = document.querySelector('#overlay');
+    const form = document.querySelector('#contact-form');
+    let contacts = [];
+
+    function initials(contact) {
+      return `${(contact.nombre || '?').trim().charAt(0)}${(contact.apellido || '').trim().charAt(0)}`.toLocaleUpperCase('es');
+    }
+    function render() {
+      const term = searchInput.value.trim().toLocaleLowerCase('es');
+      const filtered = contacts.filter(c => `${c.nombre || ''} ${c.apellido || ''} ${c.telefono || ''}`.toLocaleLowerCase('es').includes(term));
+      count.textContent = contacts.length;
+      shownCount.textContent = term ? `${filtered.length} de ${contacts.length}` : `${contacts.length} en total`;
+      if (!filtered.length) {
+        list.innerHTML = `<div class="empty"><strong>${contacts.length ? 'No encontramos coincidencias' : 'Tu agenda está lista para empezar'}</strong>${contacts.length ? 'Prueba con otro nombre o número.' : 'Agrega tu primer contacto con el botón de arriba.'}</div>`;
+        return;
+      }
+      list.replaceChildren(...filtered.map(c => {
+        const row = document.createElement('article'); row.className = 'contact-row';
+        const person = document.createElement('div'); person.className = 'person';
+        const avatar = document.createElement('div'); avatar.className = 'avatar'; avatar.textContent = initials(c); avatar.setAttribute('aria-hidden','true');
+        const name = document.createElement('div'); name.className = 'person-name'; name.textContent = `${c.nombre || ''} ${c.apellido || ''}`.trim() || 'Sin nombre';
+        person.append(avatar,name);
+        const phone = document.createElement('div'); phone.className = 'phone'; phone.textContent = c.telefono || 'Sin teléfono';
+        const action = document.createElement('a'); action.className = 'row-action'; action.href = `tel:${String(c.telefono || '').replace(/[^+\d]/g,'')}`; action.setAttribute('aria-label',`Llamar a ${name.textContent}`); action.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.6 3.8 9 3.2l2 4.7-2 1.5a15 15 0 0 0 5.6 5.6l1.5-2 4.7 2-.6 2.4a3 3 0 0 1-3.2 2.3A16.5 16.5 0 0 1 4.3 7a3 3 0 0 1 2.3-3.2Z"/></svg>';
+        row.append(person,phone,action); return row;
+      }));
+    }
+    async function loadContacts() {
+      statusBox.textContent = ''; statusBox.className = 'status';
+      list.innerHTML = '<div class="loading"><span class="spinner"></span>Cargando contactos…</div>';
+      try {
+        const response = await fetch(API_URL, { method:'GET', headers:{'Accept':'application/json'} });
+        if (!response.ok) throw new Error(`El servidor respondió ${response.status}.`);
+        const data = await response.json();
+        if (!Array.isArray(data)) throw new Error('La respuesta del servidor no tiene el formato esperado.');
+        contacts = data; render();
+      } catch (error) {
+        list.innerHTML = '<div class="empty"><strong>No se pudieron cargar los contactos</strong>Comprueba tu conexión e inténtalo de nuevo.</div>';
+        statusBox.className = 'status error';
+        statusBox.textContent = `${error.message} Si abriste este archivo localmente, el navegador podría bloquear la petición HTTP por CORS o contenido mixto; pruébalo desde un sitio servido por HTTP.`;
+        count.textContent = '—'; shownCount.textContent = '';
+      }
+    }
+    function openDialog() { form.reset(); document.querySelector('#form-message').textContent=''; overlay.classList.add('open'); setTimeout(()=>form.elements.nombre.focus(),0); }
+    function closeDialog() { overlay.classList.remove('open'); document.querySelector('#add-open').focus(); }
+    document.querySelector('#add-open').addEventListener('click',openDialog);
+    document.querySelector('#close-dialog').addEventListener('click',closeDialog);
+    document.querySelector('#cancel-dialog').addEventListener('click',closeDialog);
+    overlay.addEventListener('click',e=>{if(e.target===overlay) closeDialog();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open')) closeDialog();});
+    searchInput.addEventListener('input',render);
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      const submit = document.querySelector('#submit-button');
+      const payload = Object.fromEntries(new FormData(form).entries());
+      submit.disabled = true; submit.innerHTML = '<span class="spinner"></span>Guardando…';
+      document.querySelector('#form-message').textContent = '';
+      try {
+        const response = await fetch(API_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+        if (!response.ok) throw new Error(`No se pudo guardar el contacto (HTTP ${response.status}).`);
+        closeDialog(); statusBox.className='status success'; statusBox.textContent='Contacto guardado.';
+        await loadContacts();
+        statusBox.className='status success'; statusBox.textContent='Contacto guardado correctamente.';
+      } catch(error) {
+        document.querySelector('#form-message').textContent = `${error.message} Comprueba la conexión e inténtalo otra vez.`;
+      } finally { submit.disabled=false; submit.textContent='Guardar contacto'; }
+    });
+    loadContacts();
+  </script>
+</body>
+</html>
